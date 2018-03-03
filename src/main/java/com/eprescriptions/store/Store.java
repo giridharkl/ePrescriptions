@@ -12,4 +12,9 @@ public class Store {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="store_seq")
 	Long Id;
+	String Registration;
+	String Address;
+	Double Longitude;
+	Double Lattitude;
+	String OpenHours;
 }

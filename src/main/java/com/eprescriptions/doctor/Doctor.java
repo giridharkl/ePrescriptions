@@ -1,5 +1,7 @@
 package com.eprescriptions.doctor;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,4 +18,11 @@ public class Doctor {
   String Registration;
   String Work; //Hospital or Clinic
   String Specialization;
+  String Address;
+  Double Longitude;
+  Double Latitiude;
+  short deleted;
+  String Remarks;
+  LocalDateTime created_ts;
+  LocalDateTime updated_ts;
 }
