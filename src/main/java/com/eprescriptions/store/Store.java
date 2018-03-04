@@ -1,5 +1,7 @@
 package com.eprescriptions.store;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,10 +13,12 @@ import javax.persistence.SequenceGenerator;
 public class Store {
 	@Id
 	@GeneratedValue(strategy=GenerationType.SEQUENCE, generator="store_seq")
-	Long Id;
-	String Registration;
-	String Address;
-	Double Longitude;
-	Double Lattitude;
-	String OpenHours;
+	Long id;
+	String registration;
+	String address;
+	Double longitude;
+	Double latitude;
+	String openHours;
+	LocalDateTime createdTs;
+	LocalDateTime updatedTs;
 }

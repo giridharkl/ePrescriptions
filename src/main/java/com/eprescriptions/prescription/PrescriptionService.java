@@ -11,15 +11,15 @@ public class PrescriptionService {
 	@Autowired
 	private PrescriptionRepository prescriptionRepository;
 	
-	public List<Prescription> getPrescriptionByPatient(int patient_id) {
+	public List<Prescription> getPrescriptionByPatient(Long patient_id) {
 		List<Prescription> prescriptionList = new ArrayList<Prescription>();
-		prescriptionRepository.findAllByPatientId(patient_id).forEach(prescriptionList::add);
+		prescriptionRepository.findByPatientIdOrderByCreatedTsDesc(patient_id).forEach(prescriptionList::add);
 		return prescriptionList;
 	}
 	
-	public List<Prescription> getPrescriptionByDoctor(int doctor_id){
+	public List<Prescription> getPrescriptionByDoctor(Long doctor_id){
 		List<Prescription> prescriptionList = new ArrayList<Prescription>();
-		prescriptionRepository.findAllByDoctorId(doctor_id).forEach(prescriptionList::add);
+		prescriptionRepository.findByDoctorIdOrderByCreatedTsDesc(doctor_id).forEach(prescriptionList::add);
 		return prescriptionList;
 	}
 }

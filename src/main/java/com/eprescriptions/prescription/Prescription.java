@@ -1,5 +1,7 @@
 package com.eprescriptions.prescription;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -20,13 +22,16 @@ public class Prescription {
   
   @Id
   @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="prescription_seq")
-  Long Id;
+  Long id;
   
   @ManyToOne
-  @JoinColumn(name="patient_id", referencedColumnName="Id")
+  @JoinColumn(name="patient_id", referencedColumnName="id")
   private Patient patient;
   
   @ManyToOne
-  @JoinColumn(name="doctor_id", referencedColumnName="Id")
+  @JoinColumn(name="doctor_id", referencedColumnName="id")
   private Doctor doctor;
+  
+  LocalDateTime createdTs;
+  LocalDateTime updatedTs;
 }

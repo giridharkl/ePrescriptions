@@ -1,5 +1,7 @@
 package com.eprescriptions.patient;
 
+import java.time.LocalDateTime;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -11,6 +13,8 @@ import javax.persistence.Id;
 public class Patient {
   @Id
   @GeneratedValue(strategy=GenerationType.SEQUENCE, generator="patient_seq")
-  Long Id;
-  String Name;
+  Long id;
+  String name;
+  LocalDateTime createdTs;
+  LocalDateTime updatedTs;
 }

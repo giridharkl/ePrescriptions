@@ -17,8 +17,8 @@ public class DoctorService {
     return doctorList;
   }
   
-  public void addDoctor(Doctor doctor) {
-    doctorRepo.save(doctor);
+  public Doctor newDoctor(Doctor doctor) {
+    return doctorRepo.save(doctor);
   }
   
   public void getDoctor(Long id) {
