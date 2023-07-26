@@ -1,0 +1,67 @@
+{"properties": [
+  {
+    "name": "driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'driverClassName'"
+  },
+  {
+    "name": "url",
+    "type": "java.lang.String",
+    "description": "A description for 'url'"
+  },
+  {
+    "name": "password",
+    "type": "java.lang.String",
+    "description": "A description for 'password'"
+  },
+  {
+    "name": "username",
+    "type": "java.lang.String",
+    "description": "A description for 'username'"
+  },
+  {
+    "name": "driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'driverClassName'"
+  },
+  {
+    "name": "driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'driverClassName'"
+  },
+  {
+    "name": "driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'driverClassName'"
+  },
+  {
+    "name": "driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'driverClassName'"
+  },
+  {
+    "name": "driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'driverClassName'"
+  },
+  {
+    "name": "driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'driverClassName'"
+  },
+  {
+    "name": "hibernate.dialect",
+    "type": "java.lang.String",
+    "description": "A description for 'hibernate.dialect'"
+  },
+  {
+    "name": "driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'driverClassName'"
+  },
+  {
+    "name": "driverClassName",
+    "type": "java.lang.String",
+    "description": "A description for 'driverClassName'"
+  }
+]}
