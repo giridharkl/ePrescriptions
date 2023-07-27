@@ -40,10 +40,9 @@ public class PrescriptionController {
 		prescriptionService.addprescription(prescription);
 	}
 	
-	@RequestMapping(method=RequestMethod.PUT, value = "/doctor/{docId}/prescription/{id}")
-	public void updatePrescription(@PathVariable Long id , @RequestBody Prescription prescription, @PathVariable Long docID) {
-		prescription.setDocId(docID);
-		prescriptionService.updateprescription(prescription);
+	@RequestMapping(method=RequestMethod.PUT, value = "/doctor/{docId}/users/{userId}/prescription/{id}")
+	public void updatePrescription(@PathVariable Long id , @RequestBody Prescription prescription, @PathVariable Long docID, @PathVariable Long userId) {
+		prescriptionService.updateprescription(id, docID, userId, prescription);
 	}
 	
 	@RequestMapping(method=RequestMethod.DELETE, value="/doctor/{docId}/prescription/{id}")

@@ -32,7 +32,7 @@ public class EndUserController {
 	
 	@RequestMapping(method=RequestMethod.PUT, value="/User/{id}")
 	void updateUeser(@PathVariable Long id, @RequestBody EndUser user) {
-		userService.updateUser(user);
+		userService.updateUser(id, user);
 	}
 	
 	@RequestMapping(method=RequestMethod.DELETE, value="/User/{id}")
