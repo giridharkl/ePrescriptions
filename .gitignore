@@ -31,3 +31,7 @@ build/
 
 ### VS Code ###
 .vscode/
+
+
+### keycloak ###
+/keycloak-18.0.0/data/*
