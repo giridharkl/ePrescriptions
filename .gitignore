@@ -34,4 +34,4 @@ build/
 
 
 ### keycloak ###
-/keycloak-18.0.0/data/*
+/keycloak-18.0.0/*
