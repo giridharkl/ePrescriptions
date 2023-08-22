@@ -2,6 +2,8 @@ package com.helmihealthcare.doctor;
 
 import java.util.List;
 
+import javax.annotation.security.RolesAllowed;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,6 +23,7 @@ public class DoctorController {
 	private DoctorService doctorService;
 	
 	@RequestMapping("/doctors")
+	@RolesAllowed("admin")
 	List<Doctor> getAllDoctors(){
 		return doctorService.getAllDoctors();
 	}
