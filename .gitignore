@@ -34,4 +34,4 @@ build/
 
 
 ### keycloak ###
-\keycloak-18.0.0\data\h2\keycloakdb.lock.db
+\keycloak-18.0.0\data\*
