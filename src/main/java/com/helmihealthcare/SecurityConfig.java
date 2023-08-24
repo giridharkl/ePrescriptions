@@ -49,20 +49,14 @@ public class SecurityConfig extends KeycloakWebSecurityConfigurerAdapter
     }
 
     @Bean
-    @Override
-    public AuthenticationManager authenticationManagerBean() throws Exception {
-        return super.authenticationManagerBean();
+    public KeycloakSpringBootConfigResolver keycloakConfigResolver(){
+        return new KeycloakSpringBootConfigResolver();
     }
 
     @Override
     protected void configure(HttpSecurity http) throws Exception
     {
         super.configure(http);
-        http
-                .authorizeRequests()
-/*                 .antMatchers("/doctors/*").hasRole("doctor")
-                .antMatchers("/doctors/*").hasRole("admin") */
-                .anyRequest().permitAll();
-        http.csrf().disable();
+        http.csrf().disable().authorizeRequests().antMatchers("/auth/**").permitAll();
     }
 }
