@@ -15,8 +15,18 @@ public class LoginController {
     LoginService loginservice;
 
     @PostMapping("/login")
-    public ResponseEntity<LoginResponse> login (@RequestBody LoginRequest loginrequest){
+    public ResponseEntity<LoginResponse> login(@RequestBody LoginRequest loginrequest){
         return loginservice.login(loginrequest);
+    }
+
+    @PostMapping("/logout")
+    public ResponseEntity<Response> logout(@RequestBody Token token){
+        return loginservice.logout(token);
+    }
+
+    @PostMapping("/introspect")
+    public ResponseEntity<IntrospectResponse> introspect(@RequestBody Token token){
+        return loginservice.introspect(token);
     }
     
 }
